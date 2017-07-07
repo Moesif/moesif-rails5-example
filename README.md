@@ -40,5 +40,5 @@ moesif_options = {
 6. To run: `$ bin/rails server`
 
 7. To see a list of routes that you can run test against run `$ rake routes`, and
-send some requests to some of the routes and verify that the api calls is captured in
+send some requests to some of the routes and verify that the API calls are captured in
 your Moesif account.
