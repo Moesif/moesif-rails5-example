@@ -1,0 +1,32 @@
+require_relative 'boot'
+
+require 'rails/all'
+
+# Require the gems listed in Gemfile, including any gems
+# you've limited to :test, :development, or :production.
+Bundler.require(*Rails.groups)
+
+module Blog
+  class Application < Rails::Application
+    # Use the responders controller from the responders gem
+    config.app_generators.scaffold_controller :responders_controller
+    moesif_options = {
+      'application_id' => 'your application id',
+      'debug' => false
+    }
+
+    moesif_options['identify_user'] = Proc.new{|env, headers, body|
+      'abcefg'
+    }
+
+    moesif_options['identify_session'] = Proc.new{|env, headers, body|
+      'session1'
+    }
+
+    config.middleware.use "MoesifRack::MoesifMiddleware", moesif_options
+
+    # Settings in config/environments/* take precedence over those specified here.
+    # Application configuration should go into files in config/initializers
+    # -- all .rb files in that directory are automatically loaded.
+  end
+end
