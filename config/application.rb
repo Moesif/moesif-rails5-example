@@ -11,7 +11,7 @@ module Blog
     # Use the responders controller from the responders gem
     config.app_generators.scaffold_controller :responders_controller
     moesif_options = {
-      'application_id' => 'your application id',
+      'application_id' => 'your application id goes here',
       'debug' => false
     }
 
@@ -23,7 +23,14 @@ module Blog
       'session1'
     }
 
-    config.middleware.use "MoesifRack::MoesifMiddleware", moesif_options
+    moesif_options['get_metadata'] = Proc.new{|env, headers, body|
+      {
+        'foo' => '123'
+      }
+    }
+
+    config.middleware.insert_before(Rails::Rack::Logger, "MoesifRack::MoesifMiddleware", moesif_options)
+    # config.middleware.use "MoesifRack::MoesifMiddleware", moesif_options
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers

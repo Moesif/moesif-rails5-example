@@ -18,7 +18,7 @@ and this popular [blog post regarding restful APIs on Rails](https://blog.codela
 moesif-rack's [github readme](https://github.com/Moesif/moesif-rack) already documented
 the steps for setup. Here are some of the key files again for references:
 
-- `Gemfile` added `gem 'moesif_rack', '~> 1.1.1'`
+- `Gemfile` added `gem 'moesif_rack', '~> 1.2.0'`
 - `config/application.rb` where we added Moesif middleware related settings.
 
 ## How to run this example.
