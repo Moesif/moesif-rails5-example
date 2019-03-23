@@ -105,7 +105,7 @@ GEM
       json_mapper (~> 0.2.1)
       moesif_unirest (~> 1.1.5)
       test-unit (~> 3.1.5)
-    moesif_rack (1.2.5)
+    moesif_rack (1.2.6)
       moesif_api (~> 1.2.6)
       test-unit (~> 3.1.5)
     moesif_unirest (1.1.5)
@@ -180,8 +180,8 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.4.0)
-    test-unit (3.1.9)
+    sqlite3 (1.3.13)
+    test-unit (3.1.5)
       power_assert
     thor (0.20.3)
     thread_safe (0.3.6)
@@ -215,14 +215,14 @@ DEPENDENCIES
   jquery-rails
   kaminari
   listen (~> 3.0.5)
-  moesif_rack (~> 1.2.5)
+  moesif_rack (~> 1.2.6)
   puma (~> 3.0)
   rails (~> 5.0.0, >= 5.0.0.1)
   responders
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
-  sqlite3
+  sqlite3 (~> 1.3.11)
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)
