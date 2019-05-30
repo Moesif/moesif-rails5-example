@@ -101,12 +101,12 @@ GEM
     mini_mime (1.0.1)
     mini_portile2 (2.4.0)
     minitest (5.11.3)
-    moesif_api (1.2.6)
+    moesif_api (1.2.7)
       json_mapper (~> 0.2.1)
       moesif_unirest (~> 1.1.5)
       test-unit (~> 3.1.5)
-    moesif_rack (1.2.6)
-      moesif_api (~> 1.2.6)
+    moesif_rack (1.3.0)
+      moesif_api (~> 1.2.7)
       test-unit (~> 3.1.5)
     moesif_unirest (1.1.5)
       addressable (>= 2.3.5)
@@ -215,7 +215,7 @@ DEPENDENCIES
   jquery-rails
   kaminari
   listen (~> 3.0.5)
-  moesif_rack (~> 1.2.6)
+  moesif_rack (~> 1.3.0)
   puma (~> 3.0)
   rails (~> 5.0.0, >= 5.0.0.1)
   responders

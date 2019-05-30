@@ -12,7 +12,8 @@ module Blog
     config.app_generators.scaffold_controller :responders_controller
     moesif_options = {
       'application_id' => 'your application id goes here',
-      'debug' => false
+      'debug' => false,
+      'capture_outoing_requests' => false
     }
 
     moesif_options['identify_user'] = Proc.new{|env, headers, body|
@@ -27,6 +28,28 @@ module Blog
       {
         'foo' => '123'
       }
+    }
+
+    moesif_options['get_metadata_outgoing'] = Proc.new{|request, response|
+      {
+        'capture_outgoing' => 'true'
+      }
+    }
+
+    moesif_options['identify_user_outgoing'] = Proc.new{|request, response|
+      'outgoing_user'
+    }
+
+    moesif_options['identify_session_outgoing'] = Proc.new{|request, response|
+      'outgoing_session'
+    }
+
+    moesif_options['skip_outgoing'] = Proc.new{|request, response|
+      false
+    }
+
+    moesif_options['mask_data_outgoing'] = Proc.new{|event_model|
+      event_model
     }
 
     config.middleware.insert_before(Rails::Rack::Logger, "MoesifRack::MoesifMiddleware", moesif_options)
