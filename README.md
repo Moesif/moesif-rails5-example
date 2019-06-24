@@ -17,7 +17,7 @@ and this popular [blog post regarding RESTful APIs on Rails](https://blog.codela
 
 [moesif-rack's documentation](https://www.moesif.com/docs/server-integration/rack/) has detailed installation instructions and configuration options. Key changes to the base example to enable Moesif:
 
-- Add `gem 'moesif_rack', '~> 1.3.0'` to the Gemfile
+- Add `gem 'moesif_rack', '~> 1.3.2'` to the Gemfile
 - Modify the `config/application.rb` to use your Moesif Application Id which can be obtained in your Moesif account.
 
 ## How to run

@@ -20,6 +20,10 @@ module Blog
       'abcefg'
     }
 
+    moesif_options['identify_company'] = Proc.new{|env, headers, body|
+      '12345'
+    }
+
     moesif_options['identify_session'] = Proc.new{|env, headers, body|
       'session1'
     }
@@ -38,6 +42,10 @@ module Blog
 
     moesif_options['identify_user_outgoing'] = Proc.new{|request, response|
       'outgoing_user'
+    }
+
+    moesif_options['identify_company_outgoing'] = Proc.new{|request, response|
+      'outgoing_company'
     }
 
     moesif_options['identify_session_outgoing'] = Proc.new{|request, response|
