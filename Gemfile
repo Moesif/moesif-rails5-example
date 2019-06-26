@@ -23,7 +23,7 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 
-gem 'moesif_rack', '~> 1.3.2'
+gem 'moesif_rack', '~> 1.3.3'
 
 gem 'kaminari'
 gem 'responders'
