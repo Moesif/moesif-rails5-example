@@ -13,7 +13,9 @@ module Blog
     moesif_options = {
       'application_id' => 'your application id goes here',
       'debug' => false,
-      'capture_outoing_requests' => false
+      'capture_outoing_requests' => false,
+      'log_body' => true,
+      'log_body_outgoing' => true
     }
 
     moesif_options['identify_user'] = Proc.new{|env, headers, body|
