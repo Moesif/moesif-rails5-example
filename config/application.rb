@@ -19,11 +19,11 @@ module Blog
     }
 
     moesif_options['identify_user'] = Proc.new{|env, headers, body|
-      'abcefg'
+      'my_user_id'
     }
 
     moesif_options['identify_company'] = Proc.new{|env, headers, body|
-      '12345'
+      'my_company_id'
     }
 
     moesif_options['identify_session'] = Proc.new{|env, headers, body|
@@ -43,15 +43,15 @@ module Blog
     }
 
     moesif_options['identify_user_outgoing'] = Proc.new{|request, response|
-      'outgoing_user'
+      'outgoing_user_id'
     }
 
     moesif_options['identify_company_outgoing'] = Proc.new{|request, response|
-      'outgoing_company'
+      'outgoing_company_id'
     }
 
     moesif_options['identify_session_outgoing'] = Proc.new{|request, response|
-      'outgoing_session'
+      'outgoing_session_token'
     }
 
     moesif_options['skip_outgoing'] = Proc.new{|request, response|
