@@ -4,7 +4,7 @@
 [Rails](http://guides.rubyonrails.org/) is one of
 the most popular frameworks.
 
-[Moesif](https://www.moesif.com) is an API analytics platform.
+[Moesif](https://www.moesif.com) is an API analytics and monitoring platform.
 [moesif-rack](https://github.com/Moesif/moesif-rack)
 is a middleware that makes integration with Moesif easy for Rack based
 applications and frameworks, including Rails.
@@ -18,7 +18,14 @@ and this popular [blog post regarding RESTful APIs on Rails](https://blog.codela
 [moesif-rack's documentation](https://www.moesif.com/docs/server-integration/rack/) has detailed installation instructions and configuration options. Key changes to the base example to enable Moesif:
 
 - Add `gem 'moesif_rack', '~> 1.3.4'` to the Gemfile
-- Modify the `config/application.rb` to use your Moesif Application Id which can be obtained in your Moesif account.
+- Modify the `config/application.rb` to use your Moesif Application Id.
+
+Your Moesif Application Id can be found in the [_Moesif Portal_](https://www.moesif.com/).
+After signing up for a Moesif account, your Moesif Application Id will be displayed during the onboarding steps. 
+
+You can always find your Moesif Application Id at any time by logging 
+into the [_Moesif Portal_](https://www.moesif.com/), click on the top right menu,
+and then clicking _Installation_.
 
 ## How to run
 
