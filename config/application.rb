@@ -62,8 +62,7 @@ module Blog
       event_model
     }
 
-    config.middleware.insert_before(Rails::Rack::Logger, "MoesifRack::MoesifMiddleware", moesif_options)
-    # config.middleware.use "MoesifRack::MoesifMiddleware", moesif_options
+    config.middleware.insert_before Rails::Rack::Logger, MoesifRack::MoesifMiddleware, moesif_options
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
