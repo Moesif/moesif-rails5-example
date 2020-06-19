@@ -95,19 +95,18 @@ GEM
     mail (2.7.1)
       mini_mime (>= 0.1.1)
     method_source (0.9.2)
-    mime-types (3.3)
+    mime-types (3.3.1)
       mime-types-data (~> 3.2015)
-    mime-types-data (3.2019.1009)
+    mime-types-data (3.2020.0512)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     minitest (5.13.0)
-    moesif_api (1.2.11)
+    moesif_api (1.2.12)
       json_mapper (~> 0.2.1)
       moesif_unirest (~> 1.1.5)
       test-unit (~> 3.1.5)
-    moesif_rack (1.4.0)
-      moesif_api (~> 1.2.11)
-      test-unit (~> 3.1.5)
+    moesif_rack (1.4.5)
+      moesif_api (~> 1.2, >= 1.2.12)
     moesif_unirest (1.1.5)
       addressable (>= 2.3.5)
       json (>= 1.8.1)
@@ -116,8 +115,8 @@ GEM
     nio4r (2.5.2)
     nokogiri (1.10.5)
       mini_portile2 (~> 2.4.0)
-    power_assert (1.1.5)
-    public_suffix (4.0.1)
+    power_assert (1.2.0)
+    public_suffix (4.0.5)
     puma (3.12.1)
     rack (2.0.8)
     rack-test (1.1.0)
@@ -193,7 +192,7 @@ GEM
       execjs (>= 0.3.0, < 3)
     unf (0.1.4)
       unf_ext
-    unf_ext (0.0.7.6)
+    unf_ext (0.0.7.7)
     web-console (3.7.0)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -213,7 +212,7 @@ DEPENDENCIES
   jquery-rails
   kaminari
   listen (~> 3.0.5)
-  moesif_rack (~> 1.4.0)
+  moesif_rack
   puma (~> 3.0)
   rails (~> 5.1.6)
   responders
@@ -227,4 +226,4 @@ DEPENDENCIES
   web-console
 
 BUNDLED WITH
-   2.0.1
+   2.1.4
