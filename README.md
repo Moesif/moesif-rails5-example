@@ -1,4 +1,4 @@
-# Moesif Rack Example with Rails
+# Moesif Rails 5 Example with Rails
 
 [Ruby Rack](http://rack.github.io/) is what most Ruby Web frameworks like Rails are built on top of.
 [Rails](http://guides.rubyonrails.org/) is one of
@@ -17,7 +17,7 @@ and this popular [blog post regarding RESTful APIs on Rails](https://blog.codela
 
 [moesif-rack's documentation](https://www.moesif.com/docs/server-integration/rack/) has detailed installation instructions and configuration options. Key changes to the base example to enable Moesif:
 
-- Add `gem 'moesif_rack', '~> 1.4.0'` to the Gemfile
+- Add `gem 'moesif_rack'` to the Gemfile
 - Modify the `config/application.rb` to use your Moesif Application Id.
 
 Your Moesif Application Id can be found in the [_Moesif Portal_](https://www.moesif.com/).
@@ -49,7 +49,7 @@ moesif_options = {
 bin/rails server
 ```
 
-You may have to run `bin/rails db:migrate RAILS_ENV=development` first to set up db.
+You may have to run `bin/rails db:migrate RAILS_ENV=development ` first to set up db.
 
 
 7. To see a list of routes that you can run tests against run `rake routes`. Send some requests to the API routes and verify that the API calls are captured in your Moesif account.
